@@ -50,11 +50,18 @@ namespace FuelConsumption
 
         private void btnGetResult_Click(object sender, RoutedEventArgs e)
         {
-            int startOdometerVal = 0;
-            int endOdometerVal = 0;
-            int mileage = 0;
+            int.TryParse(startOdometerVal.Text, out int sov);
+            int.TryParse(endOdometerVal.Text, out int eov);
+            int.TryParse(fuelFilled.Text, out int ff);
+            int mileage = eov - sov;
 
-            //startOdometerVal = sender as TextBox startOdometerVal
+            if (mileage > 0)
+            {
+                int consumtion = 100 * ff / mileage;
+                result.Text = consumtion.ToString() + " л/100км";
+            }
+            else result.Text = "Введены неверные данные";
+
         }
 
         private void btnClearField_Click(object sender, RoutedEventArgs e)

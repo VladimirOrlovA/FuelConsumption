@@ -101,6 +101,10 @@
                 LostFocus="field_LostFocus">
             </TextBox>
 
+            <TextBox Grid.Row="4" 
+                   Name="result" 
+                   Height="30"/>
+
             <Button Grid.Column="0" Grid.Row="5" Width="150" Height="35"
                     x:Name="btnGetResult"
                     Content="Посчитать расход"
