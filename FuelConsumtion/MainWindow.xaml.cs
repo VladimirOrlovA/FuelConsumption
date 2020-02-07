@@ -38,7 +38,9 @@ namespace FuelConsumption
 
         private void field_GotFocus(object sender, RoutedEventArgs e)
         {
-            (sender as TextBox).Background = new SolidColorBrush(Colors.LightGreen);
+            //(sender as TextBox).Background = new SolidColorBrush(Colors.LightGreen);
+            //(sender as TextBox).Background = Brushes.LightGreen;
+            ((TextBox)sender).Background = Brushes.LightGreen;
         }
 
         private void field_LostFocus(object sender, RoutedEventArgs e)
@@ -52,7 +54,7 @@ namespace FuelConsumption
             int endOdometerVal = 0;
             int mileage = 0;
 
-            startOdometerVal = sender as TextBox startOdometerVal
+            //startOdometerVal = sender as TextBox startOdometerVal
         }
 
         private void btnClearField_Click(object sender, RoutedEventArgs e)
